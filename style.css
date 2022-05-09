@@ -118,9 +118,6 @@ button[type=reset]{
 .numberOfPeople > input.error{
     border: 2px red solid;
 }
-/* .numberOfPeople > input.error + label > span{
-    opacity: 1;
-} */
 .numberOfPeople > label > span.error{
     opacity: 1;
 }
@@ -155,6 +152,7 @@ button[type=reset]{
     transform: translateX(-50%);
     font-size: 11px;
     text-align: center;
+    display: none;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -203,5 +201,8 @@ button[type=reset]{
     }
     .total > button {
         margin-top: 7.4rem;
+    }
+    .attribution{
+        display: initial;
     }
 }
