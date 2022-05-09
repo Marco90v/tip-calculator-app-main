@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+:root{
+    --StrongCyan: hsl(172, 67%, 45%);
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+    --DarkGrayishCyan: hsl(186, 14%, 43%);
+    --GrayishCyan: hsl(184, 14%, 56%);
+    --LightGrayishCyan: hsl(185, 41%, 84%);
+    --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    font-size: 24px;
+    background-color: var(--LightGrayishCyan);
+    color: var(--VeryDarkCyan);
+}
+body > header{
+    padding-top: 2rem;
+}
+body > header > h1{
+    width: 5.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: auto;
+    letter-spacing: 10px;
+}
+main{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 1rem;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    text-align: end;
+    font-size: 18px;
+    background-color: var(--VeryLightGrayishCyan);
+    color: var(--VeryDarkCyan);
+    border-radius: 5px;
+    border: 2px transparent solid;
+}
+input[type="number"]:focus-visible{
+    outline: none;
+    border: 2px var(--StrongCyan) solid;
+}
+button{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: var(--VeryDarkCyan);
+    color: var(--LightGrayishCyan);
+    cursor: pointer;
+}
+button:hover, button[type=reset]:hover{
+    background-color: var(--LightGrayishCyan);
+    color:var(--VeryDarkCyan)
+}
+button[type=reset]{
+    width: 100%;
+    background-color: var(--StrongCyan);
+    color: var(--VeryDarkCyan);
+    margin-top: 1rem;
+}
+.bill, .numberOfPeople, .selectTip, .total{
+    margin: 1.5rem;
+    position: relative;
+}
+.bill{
+    padding-top: 1rem;
+}
+.bill > label, .numberOfPeople > label, .selectTip > label{
+    color: var(--DarkGrayishCyan);
+    font-size: 15px;
+}
+.bill > img, .numberOfPeople > img{
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+}
+.bill > img {
+    top: 4rem;
+}
+.selectTip{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.selectTip > label{
+    grid-column: span 2;
+}
+.selectTip > button.active{
+    background-color: var(--StrongCyan);
+    color: var(--VeryDarkCyan); 
+}
+.numberOfPeople > input.error{
+    border: 2px red solid;
+}
+.total{
+    padding: 1.5rem;
+    background-color: var(--VeryDarkCyan);
+    color: var(--GrayishCyan);
+    border-radius: 10px;
+}
+.total h2 {
+    font-size: 1rem;
+    color: var(--White);
+}
+.TipAmountPerson, .totalPerson{
+    position: relative;
+    margin: 1rem 0;
+}
+.TipAmountPerson > .person, .totalPerson > .person {
+    font-size: .8rem;
+}
+.TipAmountPerson > .monto, .totalPerson > .monto {
+    color: var(--StrongCyan);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
