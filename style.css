@@ -35,7 +35,7 @@ body > header > h1{
 main{
     width: 100%;
     background-color: white;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     padding-bottom: 1rem;
 }
 input[type=number]::-webkit-inner-spin-button,
@@ -54,6 +54,7 @@ input[type="number"]{
     color: var(--VeryDarkCyan);
     border-radius: 5px;
     border: 2px transparent solid;
+    cursor: pointer;
 }
 input[type="number"]:focus-visible{
     outline: none;
@@ -108,8 +109,20 @@ button[type=reset]{
     background-color: var(--StrongCyan);
     color: var(--VeryDarkCyan); 
 }
+.numberOfPeople > label > span {
+    float: right;
+    margin-top: 0.5rem;
+    color: red;
+    opacity: 0;
+}
 .numberOfPeople > input.error{
     border: 2px red solid;
+}
+/* .numberOfPeople > input.error + label > span{
+    opacity: 1;
+} */
+.numberOfPeople > label > span.error{
+    opacity: 1;
 }
 .total{
     padding: 1.5rem;
@@ -136,6 +149,10 @@ button[type=reset]{
     transform: translateY(-50%);
 }
 .attribution {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
     font-size: 11px;
     text-align: center;
 }
@@ -151,6 +168,7 @@ button[type=reset]{
         height: 23.3rem;
         margin: auto;
         margin-top: 4rem;
+        border-radius: 20px;
     }
     form{
         display: grid;
@@ -166,7 +184,7 @@ button[type=reset]{
     .bill{
         padding-top: 0;
     }
-    .bill > img {
+    .bill > img, .numberOfPeople > img {
         top: 2.9rem;
     }
     .bill, .numberOfPeople, .selectTip, .total {
@@ -178,6 +196,7 @@ button[type=reset]{
     .selectTip > label{
         grid-column: span 3;
     }
+    
     .total{
         grid-row: -5 / -1;
         grid-column: 2 /3;

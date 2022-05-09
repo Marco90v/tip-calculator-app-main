@@ -3,6 +3,7 @@ const bill = document.querySelector("#bill");
 const selectTip = document.querySelector(".selectTip");
 const custom = document.querySelector("#Custom");
 const numberOfPeople = document.querySelector("#numberOfPeople");
+const error = document.querySelector(".numberOfPeople label span");
 const montoTip = document.querySelector("#montoTip");
 const montoTotal = document.querySelector("#montoTotal");
 const reset = document.querySelector("#reset");
@@ -13,7 +14,6 @@ let numPerson = 1;
 function removeClassActiveButtom(){
     const botones = selectTip.querySelectorAll("button");
     botones.forEach(({classList})=> classList.remove("active"));
-    numberOfPeople.classList.remove("error")
 }
 
 function porcentaje(num){
@@ -51,14 +51,18 @@ function handlerNumberPeople({target}){
     numPerson = Number(target.value);
     if(numPerson <= 0){
         target.classList.add("error");
+        error.classList.add("error");
     }else{
-        target.classList.remove("error")
+        target.classList.remove("error");
+        error.classList.remove("error");
         calculo();
     }
 }
 
 function handlerReset(){
     removeClassActiveButtom();
+    numberOfPeople.classList.remove("error");
+    error.classList.remove("error");
     tip = 0;
     numPerson = 1;
     montoTip.innerHTML = "$0.00";
