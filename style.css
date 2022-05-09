@@ -135,11 +135,54 @@ button[type=reset]{
     right: 0;
     transform: translateY(-50%);
 }
-
 .attribution {
     font-size: 11px;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+@media (min-width:800px) {
+    body > header {
+        margin-top: 4rem;
+    }
+    main{
+        width: 50rem;
+        height: 23.3rem;
+        margin: auto;
+        margin-top: 4rem;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    input[type=number]{
+        padding: 0.2rem 1rem;
+    }
+    button{
+        padding: 0.3rem;
+    }
+    .bill{
+        padding-top: 0;
+    }
+    .bill > img {
+        top: 2.9rem;
+    }
+    .bill, .numberOfPeople, .selectTip, .total {
+        margin: 1rem 1.5rem;
+    }
+    .selectTip{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .selectTip > label{
+        grid-column: span 3;
+    }
+    .total{
+        grid-row: -5 / -1;
+        grid-column: 2 /3;
+    }
+    .total > button {
+        margin-top: 7.4rem;
+    }
 }
